@@ -12,21 +12,21 @@ if [ -z "$KERNEL_HOST" ]; then
     KERNEL_HOST=localhost
 fi
 
-curl --location --request PUT 'http://$KERNEL_HOST:$KERNEL_PORT/process' \
+curl --location --request PUT http://$KERNEL_HOST:$KERNEL_PORT/process \
 --header 'Content-Type: application/json' \
 --data '{
     "pid": 1,
     "path": "/scripts_memoria/IO_A"
 }'
 
-curl --location --request PUT 'http://$KERNEL_HOST:$KERNEL_PORT/process' \
+curl --location --request PUT http://$KERNEL_HOST:$KERNEL_PORT/process \
 --header 'Content-Type: application/json' \
 --data '{
     "pid": 2,
     "path": "/scripts_memoria/IO_B"
 }'
 
-curl --location --request PUT 'http://$KERNEL_HOST:$KERNEL_PORT/process' \
+curl --location --request PUT http://$KERNEL_HOST:$KERNEL_PORT/process \
 --header 'Content-Type: application/json' \
 --data '{
     "pid": 3,
